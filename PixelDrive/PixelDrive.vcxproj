@@ -54,6 +54,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>PD_PLATFORM_WINDOWS;PD_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)3rd\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -68,6 +69,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>PD_PLATFORM_WINDOWS;PD_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)3rd\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,12 +79,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\PixelDrive\Log.h" />
     <ClInclude Include="src\PixelDrive.h" />
     <ClInclude Include="src\PixelDrive\Application.h" />
     <ClInclude Include="src\PixelDrive\Core.h" />
     <ClInclude Include="src\PixelDrive\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\PixelDrive\Log.cpp" />
     <ClCompile Include="src\PixelDrive\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -16,6 +16,7 @@ public:
 
 PixelDrive::Application* PixelDrive::CreateApplication()
 {
+	APP_ERROR("TEST");
 	return new Sandbox();
 }
 
